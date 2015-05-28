@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_grey_100">#CFD8DC</color>
+    <color name="red_danger">#E64A19</color>
+    <color name="trasparent_black">#88000000</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="orange_700">#E64A19</color>
+</resources>

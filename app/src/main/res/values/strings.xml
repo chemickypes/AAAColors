@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AAAColors</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="play">PLAY!</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registra_nuovo_record">Make your Record</string>
+    <string name="record_text">Your Record is %1$s! </string>
+    <string name="new_record">New Record!!!</string>
+    <string name="you_match_n_color">You match %1$s color!</string>
+    <string name="share">share</string>
+    <string name="game_over">Game Over!</string>
+    <string name="share_message">I matched %1$s color with AAA Colors! Try yourself.</string>
+
+</resources>

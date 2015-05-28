@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baraccasoftware.aaacolors.fragments.GameOverFragment"
+    android:background="@color/trasparent_black">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:layout_margin="20dp"
+        android:padding="30dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="@string/new_record"
+            android:textStyle="bold"
+            android:textColor="@color/green_500"
+            android:id="@+id/message_textView"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/you_match_n_color"
+            android:id="@+id/matchs_textView"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textColor="@color/orange_700"
+            android:text="@string/share"
+            android:id="@+id/share_textView"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_play_button"
+            android:padding="10dp"/>
+    </LinearLayout>
+</FrameLayout>
