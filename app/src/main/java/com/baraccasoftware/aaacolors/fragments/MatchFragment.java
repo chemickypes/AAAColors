@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -113,6 +114,17 @@ public class MatchFragment extends Fragment {
 
     public void setListener(OnInteractionMatchListener listener) {
         this.listener = listener;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        try{
+            timer.cancel();
+            Log.i(TAG,"Stopped Timer on Pause");
+        }catch (Exception e){
+            Log.i(TAG,"stopped timer");
+        }
     }
 
     @Override
