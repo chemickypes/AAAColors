@@ -1,6 +1,7 @@
 package com.baraccasoftware.aaacolors.fragments;
 
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.BounceInterpolator;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.baraccasoftware.aaacolors.R;
@@ -23,6 +26,8 @@ public class GameOverFragment extends Fragment {
     public static final String TAG = "GameOverFramgnet";
     int record;
     private OnChangeRecordListener listener;
+    private LinearLayout panel;
+    private ObjectAnimator anim;
 
     public GameOverFragment() {
         // Required empty public constructor
@@ -47,6 +52,7 @@ public class GameOverFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_game_over, container, false);
+        panel = (LinearLayout) view.findViewById(R.id.panel_game_over);
         TextView message = (TextView) view.findViewById(R.id.message_textView);
         TextView numberMatches =  (TextView) view.findViewById(R.id.matchs_textView);
         View share = view.findViewById(R.id.share_textView);
@@ -60,7 +66,7 @@ public class GameOverFragment extends Fragment {
         if(LivelloUtil.currentLevel>record){
             record = LivelloUtil.currentLevel;
             LevelPreferences.getInstance(getActivity()).setRecord(LivelloUtil.currentLevel);
-            LivelloUtil.currentLevel = 0;
+
 
             message.setText(R.string.new_record);
             message.setTextColor(getResources().getColor(R.color.green_500));
@@ -73,6 +79,13 @@ public class GameOverFragment extends Fragment {
             share.setVisibility(View.GONE);
         }
 
+        LivelloUtil.currentLevel = 0;
+
+        anim
+                = ObjectAnimator.ofFloat(panel, "scaleX", 0.0f, 1.0f);
+        anim.setDuration(1000);
+        anim.setInterpolator(new BounceInterpolator());
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +93,19 @@ public class GameOverFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //panel.animate().alpha(0).start();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //panel.animate().yBy(0).setDuration(10000).setInterpolator(new BounceInterpolator()).setStartDelay(200);
+        anim.start();
     }
 
     private void share() {

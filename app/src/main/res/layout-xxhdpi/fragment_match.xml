@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.baraccasoftware.aaacolors.fragments.MatchFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="seconds..."
+        android:id="@+id/time_textView"
+        android:layout_marginTop="88dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="@dimen/central_color"
+        android:layout_height="@dimen/central_color"
+        android:id="@+id/central_color_imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="56dp"
+        android:layout_below="@+id/time_textView"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="73dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/second_color"
+            android:id="@+id/f_color_imageView"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/second_color"
+            android:id="@+id/s_color_imageView"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/second_color"
+            android:id="@+id/t_color_imageView"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>
