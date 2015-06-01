@@ -10,6 +10,7 @@ public class LevelPreferences {
 
     private static final String PREFERENCES_TAG = "LEVEL_PREFENCES";
     private static final String RECORD_TAG = "RECORD_TAG";
+    private static final String MATCHES_N_TAG = "MATCHES_N_TAG";
     private static LevelPreferences instance;
     private Context context;
     private SharedPreferences preferences;
@@ -33,6 +34,17 @@ public class LevelPreferences {
     public void setRecord(int record){
         editor = preferences.edit();
         editor.putInt(RECORD_TAG,record);
+        editor.apply();
+    }
+
+    public int getNumberOfColor(){
+        return preferences.getInt(MATCHES_N_TAG,0);
+    }
+
+    public void incrementNumberOfColor(int number){
+        int n = getNumberOfColor();
+        editor = preferences.edit();
+        editor.putInt(MATCHES_N_TAG,n+number);
         editor.apply();
     }
 

@@ -79,6 +79,8 @@ public class GameOverFragment extends Fragment {
             share.setVisibility(View.GONE);
         }
 
+        LevelPreferences.getInstance(getActivity()).incrementNumberOfColor(LivelloUtil.currentLevel);
+
         LivelloUtil.currentLevel = 0;
 
         anim
