@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,7 +80,8 @@ public class GameOverFragment extends Fragment {
             share.setVisibility(View.GONE);
         }
 
-        LevelPreferences.getInstance(getActivity()).incrementNumberOfColor(LivelloUtil.currentLevel);
+        int nm = LevelPreferences.getInstance(getActivity()).getNumberOfColor();
+        LevelPreferences.getInstance(getActivity()).incrementNumberOfColor(nm + LivelloUtil.currentLevel);
 
         LivelloUtil.currentLevel = 0;
 
@@ -110,6 +112,12 @@ public class GameOverFragment extends Fragment {
         anim.start();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        listener.onGoalGot();
+    }
+
     private void share() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
@@ -131,5 +139,6 @@ public class GameOverFragment extends Fragment {
 
     public interface OnChangeRecordListener {
         void onChangeRecord(int record);
+        void onGoalGot();
     }
 }

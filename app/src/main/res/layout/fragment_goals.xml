@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.baraccasoftware.aaacolors.RankingActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@string/trofei"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/number_of_matches"
+        android:textColor="@color/green_500"
+        android:id="@+id/number_matches_textView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/young_t"
+        android:id="@+id/young_textView"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/expert_t"
+        android:id="@+id/expert_textView"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/senior_t"
+        android:id="@+id/senior_textView"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/leader_t"
+        android:id="@+id/leader_textView"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/boss_t"
+        android:id="@+id/boss_textView"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/king_t"
+        android:id="@+id/king_textView"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+
+</LinearLayout>

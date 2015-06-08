@@ -12,6 +12,29 @@
     <string name="you_match_n_color">You match %1$s color!</string>
     <string name="share">share</string>
     <string name="game_over">Game Over!</string>
-    <string name="share_message">I matched %1$s color with AAA Colors! Try yourself.</string>
+    <string name="share_message">I matched %1$s color with AAA Colors! Try yourself. https://play.google.com/store/apps/details?id=com.baraccasoftware.aaacolors</string>
+    <string name="title_activity_ranking">RankingActivity</string>
+    <string name="trofei">Goals</string>
+    <string name="number_of_matches">You matched %1$s colors</string>
+    <string name="young_t">Young</string>
+    <string name="good_t">Good</string>
+    <string name="expert_t">Expert</string>
+    <string name="senior_t">Senior</string>
+    <string name="leader_t">Leader</string>
+    <string name="boss_t">Boss</string>
+    <string name="king_t">King</string>
+    <string name="you_must_match_n_color">You must match %1$s color to get this Goals!</string>
+    <string name="you_are_n_player">Compliments! You are %1$s Player!</string>
+    <string name="url_app">https://play.google.com/store/apps/details?id=com.baraccasoftware.aaacolors</string>
+
+    <string-array name="level_player">
+        <item >Young</item>
+        <item >Good</item>
+        <item >Expert</item>
+        <item >Senior</item>
+        <item >Leader</item>
+        <item >Boss</item>
+        <item >King</item>
+    </string-array>
 
 </resources>

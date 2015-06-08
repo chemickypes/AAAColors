@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baraccasoftware.aaacolors.fragments.GoalGotFragment" android:background="@color/trasparent_black">
+
+
+    <LinearLayout
+        android:id="@+id/goal_got_panel"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:padding="30dp"
+        android:layout_margin="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/you_are_n_player"
+            android:id="@+id/message_textView"
+            android:gravity="center"
+            android:textColor="@color/green_500"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textColor="@color/orange_700"
+            android:text="@string/share"
+            android:id="@+id/share_textView"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_play_button"
+            android:padding="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

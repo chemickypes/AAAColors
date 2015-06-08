@@ -13,6 +13,13 @@ import java.util.ArrayList;
  * Created by angelo on 25/05/15.
  */
 public class LivelloUtil {
+    public static final int YOUNG = 10;
+    public static final int EXPERT = 50;
+    public static final int SENIOR = 70;
+    public static final int LEADER = 100;
+    public static final int BOSS = 150;
+    public static final int KING = 200;
+    public static final int[] LEVELS = {10,50,70,100,150,200};
     private static Livello next;
 
     private static ArrayList<Livello> livellos;
@@ -69,10 +76,19 @@ public class LivelloUtil {
         return pacMan;
     }
 
-
-
-
-
+    static public  boolean[] getGoals(int record){
+        boolean[] goals = new boolean[6];
+        /*goals[0] = record >= YOUNG;
+        goals[1] = record >= EXPERT;
+        goals[2] = record >= SENIOR;
+        goals[3] = record >= LEADER;
+        goals[4] = record >= BOSS;
+        goals[5] = record >= KING;*/
+        for(int i = 0; i<6;i++){
+            goals[i] = record >= LEVELS[i];
+        }
+        return goals;
+    }
 
 
 }
