@@ -37,9 +37,9 @@ public class GoalsFragment extends Fragment implements View.OnClickListener {
         LevelPreferences preferences = LevelPreferences.getInstance(getActivity());
         nMatches = preferences.getNumberOfColor();
 
-        ((TextView) rootview.findViewById(R.id.number_matches_textView)).setText(
+        /*((TextView) rootview.findViewById(R.id.number_matches_textView)).setText(
                 getString(R.string.you_match_n_color, nMatches)
-        );
+        );*/
 
         View y = rootview.findViewById(R.id.young_textView);
         if(preferences.getGoals(LevelPreferences.YOUNG_L_TAG)) select(y);

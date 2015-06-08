@@ -23,7 +23,8 @@
         android:id="@+id/number_matches_textView"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
 
     <TextView
         android:layout_width="match_parent"

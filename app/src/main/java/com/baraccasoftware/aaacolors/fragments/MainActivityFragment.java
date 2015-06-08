@@ -130,7 +130,6 @@ public class MainActivityFragment extends Fragment implements MatchFragment.OnIn
 
         boolean[] goalsN = LivelloUtil.getGoals(record);
         boolean[] goalsP = LevelPreferences.getInstance(getActivity()).getGoals();
-        //TODO
 
         levelGot = 5;
         //decremento il livello raggiunto se i livelli raggiunti e che avevo sono uguali
