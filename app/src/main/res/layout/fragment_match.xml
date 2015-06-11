@@ -18,14 +18,26 @@
         android:layout_marginEnd="24dp"
         android:layout_marginTop="30dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="level"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:id="@+id/level_textView2"
+        android:textColor="@color/indigo_500"
+        android:layout_alignTop="@+id/time_textView" />
+
     <ImageView
         android:layout_width="@dimen/central_color"
         android:layout_height="@dimen/central_color"
         android:id="@+id/central_color_imageView"
         android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="62dp"
         android:layout_below="@+id/time_textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp" />
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -57,4 +69,6 @@
             android:src="@mipmap/ic_launcher"
             android:layout_weight="1" />
     </LinearLayout>
+
+
 </RelativeLayout>

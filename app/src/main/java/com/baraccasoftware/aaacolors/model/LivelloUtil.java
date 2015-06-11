@@ -29,11 +29,11 @@ public class LivelloUtil {
     public static Livello getNext() {
         if(livellos == null || livellos.size()==0){
             livellos = new ArrayList<>();
-            livellos.add(Livello.getLivello());
+            livellos.add(Livello.getLivello(currentLevel));
         }
         next = livellos.get(0);
         livellos.remove(0);
-        livellos.add(Livello.getLivello());
+        livellos.add(Livello.getLivello(currentLevel));
         return next;
     }
 

@@ -2,7 +2,7 @@
 <resources>
     <dimen name="activity_horizontal_margin">14dp</dimen>
     <dimen name="activity_vertical_margin">14dp</dimen>
-    <dimen name="central_color">110dp</dimen>
-    <dimen name="second_color">60dp</dimen>
+    <dimen name="central_color">120dp</dimen>
+    <dimen name="second_color">65dp</dimen>
     <dimen name="play_central">48sp</dimen>
 </resources>

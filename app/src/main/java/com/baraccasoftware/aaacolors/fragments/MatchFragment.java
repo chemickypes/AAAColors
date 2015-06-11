@@ -33,6 +33,7 @@ public class MatchFragment extends Fragment {
     private Livello l;
 
     private OnInteractionMatchListener listener;
+    private TextView ltextView;
 
     public MatchFragment() {
         // Required empty public constructor
@@ -51,6 +52,7 @@ public class MatchFragment extends Fragment {
         // Inflate the layout for this fragment
         rootview = inflater.inflate(R.layout.fragment_match, container, false);
         time = (TextView) rootview.findViewById(R.id.time_textView);
+        ltextView = (TextView) rootview.findViewById(R.id.level_textView2);
         central = (ImageView) rootview.findViewById(R.id.central_color_imageView);
         f = (ImageView) rootview.findViewById(R.id.f_color_imageView);
         s = (ImageView) rootview.findViewById(R.id.s_color_imageView);
@@ -143,7 +145,7 @@ public class MatchFragment extends Fragment {
         f.setImageDrawable(LivelloUtil.getFirstDrawable(getActivity(),l));
         s.setImageDrawable(LivelloUtil.getSecondDrawable(getActivity(),l));
         t.setImageDrawable(LivelloUtil.getThirdDrawable(getActivity(),l));
-
+       // ltextView.setText(getString(R.string.livello_q,l.getLiv()));
         timer.start();
     }
 

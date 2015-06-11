@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.ArcShape;
+import android.util.Log;
 
 import com.baraccasoftware.aaacolors.components.RandomValue;
 
@@ -20,8 +21,8 @@ public class Livello {
     int target,first,second,third;
 
 
-    public static Livello getLivello(){
-        Livello livello;
+    public static Livello getLivello(int liv){
+        Livello livello = new Livello(liv);
         int red = RandomValue.getIntColor();
         int green = RandomValue.getIntColor();
         int blue =RandomValue.getIntColor();
@@ -29,10 +30,10 @@ public class Livello {
 
         int c1 = target;
 
-        int c2 = getModifiedColor(red,green,blue);
-        int c3 = getModifiedColor(red,green,blue);
+        int c2 = getModifiedColor(red,green,blue,liv);
+        int c3 = getModifiedColor(red,green,blue,liv);
 
-        livello = new Livello(target,c1,c2,c3);
+        livello .setColor(target, c1, c2, c3);
 
         return livello;
 
@@ -42,18 +43,20 @@ public class Livello {
         return RandomValue.getIntOffset(2) == 0?color+offset:color-offset;
     }
 
-    private static int getModifiedColor(int red, int green, int blue){
+    private static int getModifiedColor(int red, int green, int blue,int liv){
+        int offset = (80 - liv)>25?80-liv:25;
+        Log.d("LivelloGenerator","livello offset: "+offset);
         int c2;
 
         switch (RandomValue.getColorToModify()){
             case 0:
-                c2 = Color.rgb(modifiedColor(red,50), green, blue);
+                c2 = Color.rgb(modifiedColor(red,offset), green, blue);
                 break;
             case 1:
-                c2 = Color.rgb(red,modifiedColor(green,50),blue);
+                c2 = Color.rgb(red,modifiedColor(green,offset),blue);
                 break;
             default:
-                c2 = Color.rgb(red,green,modifiedColor(blue,50));
+                c2 = Color.rgb(red,green,modifiedColor(blue,offset));
                 break;
         }
 
@@ -61,6 +64,15 @@ public class Livello {
     }
 
     public Livello(int target, int first, int second,int third) {
+        setColor(target,first,second,third);
+
+    }
+
+    public Livello(int liv) {
+        this.liv = liv;
+    }
+
+    public void setColor(int target, int first, int second,int third){
         this.target = target;
 
         ArrayList<Integer> ss = new ArrayList<>();
@@ -73,7 +85,6 @@ public class Livello {
         this.first = ss.get(0);
         this.second = ss.get(1);
         this.third = ss.get(2);
-
     }
 
     public boolean checkFirstColor(){
