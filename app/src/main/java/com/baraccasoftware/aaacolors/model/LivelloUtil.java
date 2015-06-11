@@ -37,6 +37,17 @@ public class LivelloUtil {
         return next;
     }
 
+    public static void reset(){
+        currentLevel = 0;
+        if(livellos == null) {
+            livellos = new ArrayList<>();
+        }else {
+            livellos.clear();
+        }
+        livellos.add(Livello.getLivello(currentLevel));
+
+    }
+
     static public Drawable getTargetDrawable (Context context,Livello l){
         ShapeDrawable pacMan = new ShapeDrawable(new ArcShape(0, 360));
         int px = context.getResources().getDimensionPixelSize(R.dimen.central_color);

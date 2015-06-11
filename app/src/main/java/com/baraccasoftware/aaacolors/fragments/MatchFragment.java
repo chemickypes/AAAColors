@@ -24,8 +24,9 @@ public class MatchFragment extends Fragment {
 
 
     private static final long COUNT_DOWN_INTERVAL = 1000;
-    private static final long MILLIS = 5 * 1000;
+    private static final long MILLIS = 7 * 1000;
     public static final String TAG = "MatchFragment";
+    private static final long MIN_MILLIS = 2 * 1000;
     private View rootview;
     private TextView time;
     private SimpleCountDown timer;
@@ -96,7 +97,8 @@ public class MatchFragment extends Fragment {
 
 
 
-        timer = new SimpleCountDown(getActivity(),MILLIS,COUNT_DOWN_INTERVAL,time);
+
+
 
         return rootview;
     }
@@ -135,15 +137,22 @@ public class MatchFragment extends Fragment {
 
         l = LivelloUtil.getNext();
 
+        long tM = MILLIS - ((l.getLiv()/10)*1000);
+
+        timer = new SimpleCountDown(getActivity(),
+                tM>MIN_MILLIS?tM:MIN_MILLIS,
+                COUNT_DOWN_INTERVAL,time);
+
+        Log.d(TAG,"millis: "+tM);
 
         play(l);
     }
 
     private void play(Livello l) {
 
-        central.setImageDrawable(LivelloUtil.getTargetDrawable(getActivity(),l));
-        f.setImageDrawable(LivelloUtil.getFirstDrawable(getActivity(),l));
-        s.setImageDrawable(LivelloUtil.getSecondDrawable(getActivity(),l));
+        central.setImageDrawable(LivelloUtil.getTargetDrawable(getActivity(), l));
+        f.setImageDrawable(LivelloUtil.getFirstDrawable(getActivity(), l));
+        s.setImageDrawable(LivelloUtil.getSecondDrawable(getActivity(), l));
         t.setImageDrawable(LivelloUtil.getThirdDrawable(getActivity(),l));
        // ltextView.setText(getString(R.string.livello_q,l.getLiv()));
         timer.start();

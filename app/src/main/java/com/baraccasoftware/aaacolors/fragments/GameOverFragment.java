@@ -83,7 +83,9 @@ public class GameOverFragment extends Fragment {
         int nm = LevelPreferences.getInstance(getActivity()).getNumberOfColor();
         LevelPreferences.getInstance(getActivity()).incrementNumberOfColor(nm + LivelloUtil.currentLevel);
 
-        LivelloUtil.currentLevel = 0;
+        //LivelloUtil.currentLevel = 0;
+        LivelloUtil.reset();
+
 
         anim
                 = ObjectAnimator.ofFloat(panel, "scaleX", 0.0f, 1.0f);

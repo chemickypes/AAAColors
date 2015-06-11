@@ -45,7 +45,7 @@ public class Livello {
 
     private static int getModifiedColor(int red, int green, int blue,int liv){
         int offset = (80 - liv)>25?80-liv:25;
-        Log.d("LivelloGenerator","livello offset: "+offset);
+       // Log.d("LivelloGenerator","livello offset: "+offset);
         int c2;
 
         switch (RandomValue.getColorToModify()){
